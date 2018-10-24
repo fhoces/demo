@@ -127,7 +127,7 @@ Notice that this is equivalent to running a set of t-test comparisons of means o
 ```{r sample-ttest}
 t1 <- t.test(female ~ group1, data=worms, var.equal = TRUE)
 est_t1 <- diff(t1$estimate)
-st_t1 <- t1$statistic
+st_t1 <- t1$statistic 
 ```
 
 This gives us a estimated difference of `r round(est_t1, 4)` and a t-statistic of `r round(st_t1, 4)`, wich correspond to colum 1 and row 1 of table 2 (the t-statistic is the estimated difference divided by the standard error: `r round((summary(m1.1))$coefficients[2,1], 4)` / `r round((summary(m1.1))$coefficients[2,2], 4)` = `r round(summary(m1.1)$coefficients[2,1] / summary(m1.1)$coefficients[2,2], 4)`)
