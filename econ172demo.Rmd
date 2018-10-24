@@ -72,8 +72,8 @@ E[y_i|T=1] - E[y_i|T=0] = b
 ##### Loading the data and presenting descriptive statistics
 
 ```{r load-data, echo=TRUE}  
-worms <- read.csv("psets/Econ-172_PSet1-S17-data.csv")
-worms2 <- read.csv("psets/Econ-172_PSet1-Spring2018-data.csv")
+worms <- read.csv("data/Econ-172_PSet1-S17-data.csv")
+worms2 <- read.csv("data/Econ-172_PSet1-Spring2018-data.csv")
 
 tab1 <- worms %>% 
   select(-"schid") %>% 
