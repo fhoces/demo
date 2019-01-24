@@ -531,249 +531,35 @@ m1.7=lm(female ~ group2, data=subset(worms,group1==0))</code></pre>
 <br />
 
 <div align="center">
-<pre class="r"><code>stargazer::stargazer(m1.1,m1.2,m1.3,m1.4,m1.5,m1.6, type = &quot;html&quot;,
+<pre class="r"><code>stargazer::stargazer(m1.1,m1.2,m1.3,m1.4,m1.5,m1.6, type = &quot;text&quot;,
           title=&quot;Table 2: Covariate Analysis&quot;, align = TRUE,
           omit.stat=c(&quot;LL&quot;,&quot;ser&quot;,&quot;f&quot;,&quot;adj.rsq&quot;, &quot;rsq&quot;), no.space=TRUE,
           header=FALSE, column.sep.width = &quot;0pt&quot;)</code></pre>
-<table style="text-align:center">
-<caption>
-<strong>Table 2: Covariate Analysis</strong>
-</caption>
-<tr>
-<td colspan="7" style="border-bottom: 1px solid black">
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-</td>
-<td colspan="6">
-<em>Dependent variable:</em>
-</td>
-</tr>
-<tr>
-<td>
-</td>
-<td colspan="6" style="border-bottom: 1px solid black">
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-</td>
-<td>
-female
-</td>
-<td>
-yob
-</td>
-<td>
-sap
-</td>
-<td>
-female
-</td>
-<td>
-yob
-</td>
-<td>
-sap
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-</td>
-<td>
-(1)
-</td>
-<td>
-(2)
-</td>
-<td>
-(3)
-</td>
-<td>
-(4)
-</td>
-<td>
-(5)
-</td>
-<td>
-(6)
-</td>
-</tr>
-<tr>
-<td colspan="7" style="border-bottom: 1px solid black">
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-group1
-</td>
-<td>
--0.007
-</td>
-<td>
-0.005
-</td>
-<td>
--0.128
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-</td>
-<td>
-(0.020)
-</td>
-<td>
-(0.173)
-</td>
-<td>
-(0.119)
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-group2
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-0.036
-</td>
-<td>
-0.779<sup>***</sup>
-</td>
-<td>
-0.147
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-(0.027)
-</td>
-<td>
-(0.190)
-</td>
-<td>
-(0.142)
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-Constant
-</td>
-<td>
-0.386<sup>***</sup>
-</td>
-<td>
-1,986.746<sup>***</sup>
-</td>
-<td>
-0.408<sup>***</sup>
-</td>
-<td>
-0.368<sup>***</sup>
-</td>
-<td>
-1,986.348<sup>***</sup>
-</td>
-<td>
-0.333<sup>***</sup>
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-</td>
-<td>
-(0.011)
-</td>
-<td>
-(0.100)
-</td>
-<td>
-(0.069)
-</td>
-<td>
-(0.019)
-</td>
-<td>
-(0.136)
-</td>
-<td>
-(0.101)
-</td>
-</tr>
-<tr>
-<td colspan="7" style="border-bottom: 1px solid black">
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-Observations
-</td>
-<td>
-74
-</td>
-<td>
-74
-</td>
-<td>
-74
-</td>
-<td>
-49
-</td>
-<td>
-49
-</td>
-<td>
-49
-</td>
-</tr>
-<tr>
-<td colspan="7" style="border-bottom: 1px solid black">
-</td>
-</tr>
-<tr>
-<td style="text-align:left">
-<em>Note:</em>
-</td>
-<td colspan="6" style="text-align:right">
-<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
-</td>
-</tr>
-</table>
+<pre><code>## 
+## Table 2: Covariate Analysis
+## ==========================================================================
+##                                   Dependent variable:                     
+##              -------------------------------------------------------------
+##               female      yob        sap     female      yob        sap   
+##                (1)        (2)        (3)      (4)        (5)        (6)   
+## --------------------------------------------------------------------------
+## group1        -0.007     0.005      -0.128                                
+##              (0.020)    (0.173)    (0.119)                                
+## group2                                       0.036     0.779***    0.147  
+##                                             (0.027)    (0.190)    (0.142) 
+## Constant     0.386*** 1,986.746*** 0.408*** 0.368*** 1,986.348*** 0.333***
+##              (0.011)    (0.100)    (0.069)  (0.019)    (0.136)    (0.101) 
+## --------------------------------------------------------------------------
+## Observations    74         74         74       49         49         49   
+## ==========================================================================
+## Note:                                          *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
 </div>
 <p><br />
 </p>
 <p>Notice that this is equivalent to running a set of t-test comparisons of means of the three different outcomes between the two corresponding groups (group 1 v. groups 2+3 and group 2 v. group 3). For example the code below computes the difference between group 1 and groups 2+3 for the outcome variable <code>female</code></p>
 <pre class="r"><code>t1 &lt;- t.test(female ~ group1, data=worms, var.equal = TRUE)
 est_t1 &lt;- diff(t1$estimate)
-st_t1 &lt;- t1$statistic</code></pre>
+st_t1 &lt;- t1$statistic </code></pre>
 <p>This gives us a estimated difference of -0.0066 and a t-statistic of 0.3391, wich correspond to colum 1 and row 1 of table 2 (the t-statistic is the estimated difference divided by the standard error: -0.0066 / 0.0195 = -0.3391)</p>
 <p><strong>Group 1 vs. Groups 2 and 3 [replace hard coded numbers]</strong></p>
 <p>The proportion of female children in comparison schools is 38.6%, and the average difference in the proportion of female students between treatment and comparison schools is –0.7 percentage points. Thus, treatment schools have on average 37.9% female students.</p>
